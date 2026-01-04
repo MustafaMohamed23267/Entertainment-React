@@ -32,7 +32,7 @@ function App() {
     
    <BrowserRouter>
    <Routes>
-    <Route index element={<Home/>} />
+    <Route path='/Entertainment-React' element={<Home/>} />
     <Route path='*' element={<NotFound/>} />
     <Route path='/register' element={user&&user.id?<Home/>:<Register/>} />
     <Route path='/login' element={user&&user.id?<Home/>:<Login/>} />
