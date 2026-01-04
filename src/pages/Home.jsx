@@ -1,5 +1,5 @@
 import { Footer } from "../Components/Footer"
-import { Nav } from "../Components/nav"
+import { Nav } from "../Components/Nav"
 import peak from '../assets/cinema2.mp4'
 
 export const Home = ()=>

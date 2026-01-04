@@ -1,5 +1,5 @@
 import { UserCircle} from "lucide-react"
-import { Nav } from "../Components/nav"
+import { Nav } from "../Components/Nav"
 import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../Components/AppContext";
 import { useNavigate } from "react-router-dom";
