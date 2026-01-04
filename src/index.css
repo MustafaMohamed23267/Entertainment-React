@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme
+{
+--color-background:hsl(var(--background));
+--color-foreground:hsl(var(--foreground));
+--color-primary:hsl(var(--primary));
+--color-card:hsl(var(--card));
+--color-cardtext:hsl(var(--cardtext));
+--color-detail:hsl(var(--detail));
+}
+
+@layer base
+{
+  :root
+  {
+    --background:210 40% 98%;
+    --foreground: 222 47% 11%;
+    --primary : 250 47% 60%;
+    --primary-foreground : 210 40% 98%;
+    --card: 222 47% 4%;
+    --cardtext:213 31% 91%;
+    --detail: 0 0% 30%;
+  }
+
+  .dark
+  {
+   --background:222 47% 4%;
+   --foreground: 213 31% 91%;
+   --primary : 250 65% 65%;
+   --primary-foreground : 213 31% 91%;
+   --card:210 40% 98%;
+   --cardtext:222 47% 11%;
+   --detail: 0 0% 70%;
+  }
+
+}
+
+body {
+            background-color: var(--color-background);
+            color: var(--color-foreground);
+            /* font-family: "Smooch Sans", sans-serif;
+            font-size: 16px;
+            font-weight:500; */
+            /* font-height: 10px; */
+
+            
+        }
+
+#video-background{
+  background-image: url("./assets/peak.mp4");
+  height: 100vh;
+  overflow: hidden;
+}
+
+@utility star
+{
+    @apply absolute rounded-full bg-white;
+    box-shadow: 0 0 10px 2px rgba(255,255,255,0.5);
+    animation-name:stars;
+    animation-iteration-count: infinite;
+    /* animation-name:StarsAnimation; 
+    animation-iteration-count: infinite; */
+
+
+}
+
+
+
+
+
+@utility meteor
+{
+    @apply absolute bg-linear-to-l from-white via-white to-transparent rounded-full ;
+    box-shadow: 0 0 10px 5px rgba(255,255,255,0.3); 
+    animation-name:meteor;
+    animation-iteration-count: infinite;
+    
+    animation-timing-function: linear  ;
+   
+    
+}
+
+@utility moon
+{
+    
+    box-shadow: 0 0 8px 7px rgba(255,255,255,0.3);
+    animation-name:moon; 
+    animation-iteration-count: infinite;
+    animation-duration: 200s;
+    animation-timing-function: linear  ;
+    
+    
+   
+    
+}
+
+ .profile_image
+{
+    animation-name:profileimage;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-timing-function: linear  ;
+   
+    
+}
+
+.navlink
+{
+    animation-name:navlink;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: linear  ;
+   
+    
+}
+
+@keyframes profileimage {
+        0%
+        {
+            transform:rotate(0deg) translateX(0);
+           
+        }
+       
+        100%
+        {
+            transform:rotate(360deg) translateX(0) ;
+            
+        }
+    }
+
+@keyframes navlink {
+        from{
+            transform: translateX(-20px);
+           
+        }
+       
+        to{
+            transform: translateX(0px);
+            
+        }
+    }
+
+ /* transition:5s; */
+@keyframes meteor {
+        0%
+        {
+            transform:rotate(240deg) translateX(0);
+            opacity: 1;
+        }
+        70%
+        {
+            opacity: 1;
+        }
+        100%
+        {
+            transform:rotate(240deg) translateX(-500px) ;
+            opacity: 0;
+        }
+    }
+
+@keyframes moon {
+        0%
+        {
+            transform:rotate(240deg); 
+            
+        }
+        
+        100%
+        {
+            transform:rotate(360eg);
+            
+        }
+    }
+
+   @keyframes stars {
+        0%
+        {
+            /* transform:rotate(0deg) translateX(0); */
+            
+        }
+       
+        
+       
+        100%
+        {
+            /* transform:rotate(360deg) translateX(50px) ;
+            opacity: 0; */
+        }
+    } 
+ /* animation-duration: 70s; */
