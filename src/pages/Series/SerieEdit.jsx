@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom";
-import { Nav } from "../../Components/nav";
+import { Nav } from "../../Components/Nav";
 import { Upload } from "lucide-react";
 
 

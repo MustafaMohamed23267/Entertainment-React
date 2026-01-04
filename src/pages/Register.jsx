@@ -1,7 +1,7 @@
 import { Upload, UserCircle} from "lucide-react"
 import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom";
-import { Nav } from "../Components/nav";
+import { Nav } from "../Components/Nav";
 import { AppContext } from "../Components/AppContext";
 
 export const  Register = ()=> {

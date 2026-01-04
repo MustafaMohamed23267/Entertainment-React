@@ -1,7 +1,7 @@
 // import axios from "axios";
 import {   useState } from "react"
 import { useNavigate } from "react-router-dom";
-import { Nav } from "../../Components/nav";
+import { Nav } from "../../Components/Nav";
 import { Upload } from "lucide-react";
 import { Footer } from "../../Components/Footer";
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Calendar,  Star, Timer,  Video } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Nav } from "../../Components/nav"
+import { Nav } from "../../Components/Nav"
 import axios from "axios";
 import { Footer } from "../../Components/Footer";
 

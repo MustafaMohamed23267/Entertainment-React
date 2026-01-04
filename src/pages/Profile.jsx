@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Nav } from "../Components/nav"
+import { Nav } from "../Components/Nav"
 import { useContext } from "react";
 import { AppContext } from "../Components/AppContext";
 import { Footer } from "../Components/Footer";

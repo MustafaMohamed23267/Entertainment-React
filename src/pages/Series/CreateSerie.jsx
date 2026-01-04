@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Nav } from "../../Components/nav"
+import { Nav } from "../../Components/Nav"
 import { useNavigate } from "react-router-dom";
 import { Upload } from "lucide-react";
 import { Footer } from "../../Components/Footer";

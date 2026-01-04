@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Nav } from "../../Components/nav"
+import { Nav } from "../../Components/Nav"
 import { Link } from "react-router-dom";
 import { Calendar,  Pen,  Star, Timer,  Video } from "lucide-react";
 import { Footer } from "../../Components/Footer";

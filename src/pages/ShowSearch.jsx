@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { CalendarDays, Clapperboard, Clock, StarIcon } from "lucide-react";
-import { Nav } from "../Components/nav";
+import { Nav } from "../Components/Nav";
 import axios from "axios";
 
 export const ShowSearch = ()=>
