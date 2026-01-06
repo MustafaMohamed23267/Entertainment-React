@@ -43,7 +43,7 @@ export const CreateSerie = ()=>{
         DataForm.append("imdb",form.imdb);
         DataForm.append("image",form.image);
 
-        const res = await fetch("http://127.0.0.1:8000/api/series",{
+        const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/series",{
             method:"POST",
             body:DataForm,
             headers:{

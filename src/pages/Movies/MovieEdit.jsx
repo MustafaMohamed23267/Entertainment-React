@@ -11,12 +11,12 @@ export const MovieEdit = ()=>
         const[movie , setMovie] = useState({});
         const {id} = useParams();
        useEffect(() => {
-        // fetch(`http://127.0.0.1:8000/api/movies/${id}`)
+        // fetch(`https://entertainment-laravel-production.up.railway.app//api/movies/${id}`)
         // .then((response) => response.json())
         // .then((data) => {
         //     setMovie(data);
         const fetchMovies = async()=>{
-                    const res = await fetch(`http://127.0.0.1:8000/api/movies/${id}`,{
+                    const res = await fetch(`https://entertainment-laravel-production.up.railway.app//api/movies/${id}`,{
                         method:"GET",
                         headers:{
                             Accept:"application/json",
@@ -85,7 +85,7 @@ export const MovieEdit = ()=>
                 if (form.image) {
                   formData.append('image', form.image); }
 
-                const res = await fetch(`http://127.0.0.1:8000/api/movies/${id}`, {
+                const res = await fetch(`https://entertainment-laravel-production.up.railway.app//api/movies/${id}`, {
                     method: "POST",
                     body: formData, // no JSON.stringify
                     headers: {

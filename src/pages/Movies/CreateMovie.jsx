@@ -45,7 +45,7 @@ export const CreateMovie = ()=>
                 formData.append('imdb', form.imdb);
                 formData.append('image', form.image); // file object
 
-                const res = await fetch("http://127.0.0.1:8000/api/movies", {
+                const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/movies", {
                     method: "POST",
                     body: formData, // no JSON.stringify
                     headers: {

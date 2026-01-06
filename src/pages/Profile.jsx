@@ -40,7 +40,7 @@ export const Profile = ()=>{
          <div className="flex w-full justify-between p-10 overflow-hidden scale-z-100 ">
                 <div className="flex space-x-2 ">
                     <div className="rounded-full w-25 h-25 overflow-hidden  ">
-                        <img src={`http://127.0.0.1:8000/storage/${user.profile_image}`} className="rounded-full " />
+                        <img src={`https://entertainment-laravel-production.up.railway.app//storage/${user.profile_image}`} className="rounded-full " />
                     </div>
                     <div className="flex flex-col justify-center ">
                         <span className="font-bold text-xl ">{user.firstname} {user.lastname}</span>

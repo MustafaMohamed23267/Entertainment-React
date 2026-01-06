@@ -33,7 +33,7 @@ export const Series = ()=>
 
         useEffect(()=>{
             const fetchSeries = async()=>{
-                    const res = await fetch("http://127.0.0.1:8000/api/series",{
+                    const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/series",{
                         method:"GET",
                         headers:{
                             Accept:"application/json",
@@ -55,7 +55,7 @@ export const Series = ()=>
             {
                 const value = e.target.value;
                 setSearch(value);
-                const searchout = await axios.get(`http://127.0.0.1:8000/api/series?searchname=${value}`,{
+                const searchout = await axios.get(`https://entertainment-laravel-production.up.railway.app//api/series?searchname=${value}`,{
                     headers:{
                             Accept:"application/json",
                             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -71,7 +71,7 @@ export const Series = ()=>
                 {
                     const typevalue = e.target.value;
                     setTypestate(typevalue)
-                    const res = await axios.get(`http://127.0.0.1:8000/api/series?selectedtype=${typevalue}`,{
+                    const res = await axios.get(`https://entertainment-laravel-production.up.railway.app//api/series?selectedtype=${typevalue}`,{
                     headers:{
                             Accept:"application/json",
                             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -84,7 +84,7 @@ export const Series = ()=>
                 const handelRate = async ()=>
                             {
                 
-                                const getDataByRate2 = await axios.get(`http://127.0.0.1:8000/api/series?rate1=${rate1}&rate2= ${rate2}`,{
+                                const getDataByRate2 = await axios.get(`https://entertainment-laravel-production.up.railway.app//api/series?rate1=${rate1}&rate2= ${rate2}`,{
                                     headers:{
                                             Accept:"application/json",
                                             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -139,7 +139,7 @@ export const Series = ()=>
                         <div key={data.id} className="flex flex-col duration-700 outline-1 -outline-offset-1 outline-gray-300 dark:outline-white/10 dark:bg-white/5 h-[700px] overflow-hidden  rounded-xl ">
                             <Link to={`/series/${data.id}`}  class=" space-y-5  ">
                                 <div>
-                                    <img src={`http://127.0.0.1:8000/storage/${data.image}`} class="duration-500  hover:scale-[1.05] w-[100%] h-[500px] hover:z-0 z-10" />
+                                    <img src={`https://entertainment-laravel-production.up.railway.app//storage/${data.image}`} class="duration-500  hover:scale-[1.05] w-[100%] h-[500px] hover:z-0 z-10" />
                                 </div>
                                 
                                 

@@ -10,7 +10,7 @@ export const Anime = ()=>
         const type = [{name:"shonin"}];
         const [anime , setAnime]=useState([]);
         useEffect(()=>{
-            fetch("http://127.0.0.1:8000/api/anime").then((res)=>res.json()).then((json)=>setAnime(json));
+            fetch("https://entertainment-laravel-production.up.railway.app//api/anime").then((res)=>res.json()).then((json)=>setAnime(json));
         },[])
         return(
             <div>
@@ -46,7 +46,7 @@ export const Anime = ()=>
                         <div key={data.id} className="flex flex-col bg-card duration-700 shadow-lg/30 text-cardtext  h-[700px] overflow-hidden  rounded-xl ">
                             <Link to={`/anime/${data.id}`}  class=" space-y-5  ">
                                 <div>
-                                    <img src={`http://127.0.0.1:8000/storage/${data.image}`} class="duration-500  hover:scale-[1.05] w-[100%] h-[500px] z-50" />
+                                    <img src={`https://entertainment-laravel-production.up.railway.app//storage/${data.image}`} class="duration-500  hover:scale-[1.05] w-[100%] h-[500px] z-50" />
                                 </div>
                                 
                                 

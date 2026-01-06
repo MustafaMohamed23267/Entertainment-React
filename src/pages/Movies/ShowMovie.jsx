@@ -13,7 +13,7 @@ export const ShowMovie = ()=>
         useEffect(()=>
             {
                 const fetchMovie = async()=>{
-                    const res = await fetch(`http://127.0.0.1:8000/api/movies/${id}`,{
+                    const res = await fetch(`https://entertainment-laravel-production.up.railway.app//api/movies/${id}`,{
                         method:"GET",
                         headers:{
                             Accept:"application/json",
@@ -32,7 +32,7 @@ export const ShowMovie = ()=>
             const HandelDelete = async (e)=>
                 {
                     e.preventDefault();
-                     await fetch(`http://127.0.0.1:8000/api/movies/${id}`,
+                     await fetch(`https://entertainment-laravel-production.up.railway.app//api/movies/${id}`,
                         {
                             method:"DELETE",
                             headers:{
@@ -78,7 +78,7 @@ const fullopacity = document.getElementById("deletemodal").style.display="none" 
 <div class="grid grid-cols-2 md:grid-cols-2">
 
        <div className="p-20 flex justify-start w-[400px] h-[500px] md:w-[550px] md:h-[650px] ">
-       <img src={`http://127.0.0.1:8000/storage/${movie.image}`} className="w-full " />
+       <img src={`https://entertainment-laravel-production.up.railway.app//storage/${movie.image}`} className="w-full " />
       </div>
 
       <div class="felx flex-col p-20 space-y-5">

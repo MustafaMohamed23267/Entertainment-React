@@ -38,7 +38,7 @@ export const AddAnime = ()=>
                 dataForm.append("story",form.story);
                 dataForm.append("image",form.image);
 
-                const CreateAnime = await fetch("http://127.0.0.1:8000/api/anime",{
+                const CreateAnime = await fetch("https://entertainment-laravel-production.up.railway.app//api/anime",{
                     method:"POST",
                     body:dataForm,
                     headers:{

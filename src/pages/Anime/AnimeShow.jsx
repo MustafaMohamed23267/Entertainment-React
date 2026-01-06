@@ -8,12 +8,12 @@ export const Animehow = ()=>
         const {id} = useParams();
         const navigate = useNavigate();
         useEffect(()=>{
-            fetch(`http://127.0.0.1:8000/api/anime/${id}`).then((res)=>res.json()).then((json)=>setShowAnime(json))
+            fetch(`https://entertainment-laravel-production.up.railway.app//api/anime/${id}`).then((res)=>res.json()).then((json)=>setShowAnime(json))
         },[id]);
 
         const HandelDelete = async (e)=>{
             e.preventDefault();
-            await fetch(`http://127.0.0.1:8000/api/anime/${id}` ,{
+            await fetch(`https://entertainment-laravel-production.up.railway.app//api/anime/${id}` ,{
                 method:"DELETE",
                 headers:{
                     Accept:"application/json"
@@ -29,7 +29,7 @@ export const Animehow = ()=>
               <div class="grid grid-cols-1 md:grid-cols-2">
 
                         <div class="p-20 flex justify-start">
-                        <img src={`http://127.0.0.1:8000/storage/${showAnime.image}`} class="max-md:w-full md:w-[350px] md:h-[500px] " />
+                        <img src={`https://entertainment-laravel-production.up.railway.app//storage/${showAnime.image}`} class="max-md:w-full md:w-[350px] md:h-[500px] " />
                         </div>
 
                         <div class="felx flex-col p-20 space-y-10">
