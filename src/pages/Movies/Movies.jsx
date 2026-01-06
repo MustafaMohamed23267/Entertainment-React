@@ -13,9 +13,9 @@ export const Movies = ()=>
         const [data , setData]= useState([]);
         useEffect(()=>
             {
-                // fetch("https://entertainment-laravel-production.up.railway.app//api/movies").then((Response)=>Response.json()).then((json)=>setData(json));
+                // fetch("https://entertainment-laravel-production.up.railway.app/api/movies").then((Response)=>Response.json()).then((json)=>setData(json));
                 const fetchMovies = async()=>{
-                    const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/movies",{
+                    const res = await fetch("https://entertainment-laravel-production.up.railway.app/api/movies",{
                         method:"GET",
                         headers:{
                             Accept:"application/json",
@@ -40,7 +40,7 @@ export const Movies = ()=>
 
                     const enteredtype = e.target.value;
                     setActivetype(enteredtype);
-                    const apitype = await axios.get(`https://entertainment-laravel-production.up.railway.app//api/movies?selecttype=${enteredtype}`,{
+                    const apitype = await axios.get(`https://entertainment-laravel-production.up.railway.app/api/movies?selecttype=${enteredtype}`,{
                     headers:{
                             Accept:"application/json",
                             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -61,7 +61,7 @@ export const Movies = ()=>
                 {
                     const value = e.target.value;
                     setSearch(value);
-                    const searchget = await axios.get(`https://entertainment-laravel-production.up.railway.app//api/movies?searchname=${value}`,{
+                    const searchget = await axios.get(`https://entertainment-laravel-production.up.railway.app/api/movies?searchname=${value}`,{
                     headers:{
                             Accept:"application/json",
                             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -80,7 +80,7 @@ export const Movies = ()=>
         //     {
         //         const ratevalue = e.target.value;
         //         setRate(ratevalue);
-        //         const getDataByRate = await axios.get(`https://entertainment-laravel-production.up.railway.app//api/movies?rate=${ratevalue}`);
+        //         const getDataByRate = await axios.get(`https://entertainment-laravel-production.up.railway.app/api/movies?rate=${ratevalue}`);
         //         setData(getDataByRate.data);
         //     }
 
@@ -90,7 +90,7 @@ export const Movies = ()=>
             const handelRate = async ()=>
             {
 
-                const getDataByRate2 = await axios.get(`https://entertainment-laravel-production.up.railway.app//api/movies?rate1=${rate1}&rate2= ${rate2}`,{
+                const getDataByRate2 = await axios.get(`https://entertainment-laravel-production.up.railway.app/api/movies?rate1=${rate1}&rate2= ${rate2}`,{
                     headers:{
                             Accept:"application/json",
                             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -158,7 +158,7 @@ export const Movies = ()=>
         <div key={data.id} className="flex flex-col  duration-700 outline-1 -outline-offset-1 outline-gray-300 dark:outline-white/10 dark:bg-white/5  h-[700px] overflow-hidden  rounded-xl ">
              <Link to={`/movies/${data.id}`}  class=" space-y-5  ">
                  <div>
-                    <img src={`https://entertainment-laravel-production.up.railway.app//storage/${data.image}`} class="duration-500  hover:scale-[1.05] w-[100%]  z-50 overflow-hidden" />
+                    <img src={`https://entertainment-laravel-production.up.railway.app/storage/${data.image}`} class="duration-500  hover:scale-[1.05] w-[100%]  z-50 overflow-hidden" />
                 </div>
                 
                 <div className="pl-5  z-100 ">

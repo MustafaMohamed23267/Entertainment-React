@@ -65,7 +65,7 @@ export const Nav = ()=>
         const handleLogout = async (e)=>
             {
                 e.preventDefault();
-                 const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/logout",{
+                 const res = await fetch("https://entertainment-laravel-production.up.railway.app/api/logout",{
                  method:"POST",
                 headers:{
                     Authorization:`Bearer ${token}`,
@@ -104,7 +104,7 @@ export const Nav = ()=>
                 //const serachoutput = document.getElementById("searchform").style.scale="100%";
                 const searchvalue = e.target.value;
                 setSearch(searchvalue);
-                const result = await axios.get(`https://entertainment-laravel-production.up.railway.app//api/search?search=${searchvalue}`,{
+                const result = await axios.get(`https://entertainment-laravel-production.up.railway.app/api/search?search=${searchvalue}`,{
                     headers:{
                             Accept:"application/json",
                             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -166,7 +166,7 @@ export const Nav = ()=>
                 <button onClick={showDropdown}  id="dropdownUserAvatarButton"  className="flex text-sm dark:text-white dark:bg-gray-800 rounded-full md:me-0 focus:ring-1  cursor-pointer  text-gray-900 profile_image " type="button">
                 <span className="sr-only">user </span>
                 {/* <User/>  */}
-                <img src={`https://entertainment-laravel-production.up.railway.app//storage/${user.profile_image}`} className="rounded-full w-10 h-10 " />
+                <img src={`https://entertainment-laravel-production.up.railway.app/storage/${user.profile_image}`} className="rounded-full w-10 h-10 " />
                 </button>
 
                 {/*  */}
@@ -240,7 +240,7 @@ export const Nav = ()=>
                 data.gener === "series"?`/series/${data.id}`:
                 "/notfound"} className="flex w-[400px] space-x-6 text-background cursor-pointer hover:scale-[1.02] pl-10 py-4  shadow-md duration-500 ">
                     
-                    <img src={`https://entertainment-laravel-production.up.railway.app//storage/${data.image}`} class="duration-500  hover:scale-[1.05] w-[10%] h-[50px] z-50" />
+                    <img src={`https://entertainment-laravel-production.up.railway.app/storage/${data.image}`} class="duration-500  hover:scale-[1.05] w-[10%] h-[50px] z-50" />
                     <p className="text-md hover:text-indigo-500 duration-500">{data.name}</p>
                 </Link>
                     

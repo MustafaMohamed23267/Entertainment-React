@@ -26,7 +26,7 @@ export const AnimeEdit = ()=>
         const [showAnime , setShowAnime] = useState({});
 
         useEffect(()=>{
-            fetch(`https://entertainment-laravel-production.up.railway.app//api/anime/${id}`)
+            fetch(`https://entertainment-laravel-production.up.railway.app/api/anime/${id}`)
             .then((res)=>res.json())
             .then((json)=>{setShowAnime(json);
             setForm({
@@ -59,7 +59,7 @@ export const AnimeEdit = ()=>
             DataForm.append("story",form.story);
             DataForm.append("image",form.image);
 
-            const updateres = await fetch(`https://entertainment-laravel-production.up.railway.app//api/anime/${id}`,{
+            const updateres = await fetch(`https://entertainment-laravel-production.up.railway.app/api/anime/${id}`,{
                 method:"POST",
                 body:DataForm,
                 headers:{

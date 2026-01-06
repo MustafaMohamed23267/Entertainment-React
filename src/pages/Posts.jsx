@@ -13,7 +13,7 @@ export const Posts = ()=>
         const handelSubmit=async (e)=>
             {
                 e.preventDefault();
-                const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/posts",{
+                const res = await fetch("https://entertainment-laravel-production.up.railway.app/api/posts",{
                     method:"post",
                     body:JSON.stringify(formData),
                     headers:{

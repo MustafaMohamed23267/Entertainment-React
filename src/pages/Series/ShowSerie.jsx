@@ -11,7 +11,7 @@ export const ShowSerie = ()=>{
 
     useEffect(()=>{
 const fetchSeries = async()=>{
-                    const res = await fetch(`https://entertainment-laravel-production.up.railway.app//api/series/${id}`,{
+                    const res = await fetch(`https://entertainment-laravel-production.up.railway.app/api/series/${id}`,{
                         method:"GET",
                         headers:{
                             Accept:"application/json",
@@ -29,7 +29,7 @@ const fetchSeries = async()=>{
 
 const HandelDelete = async (e)=>{
     e.preventDefault();
-    await fetch(`https://entertainment-laravel-production.up.railway.app//api/series/${id}`,{
+    await fetch(`https://entertainment-laravel-production.up.railway.app/api/series/${id}`,{
         method:"DELETE",
         headers:{
             Accept:"application/json",
@@ -77,7 +77,7 @@ const fullopacity = document.getElementById("deletemodal").style.display="none" 
     <div class="grid grid-cols-2 md:grid-cols-2">
 
        <div className="p-20 flex justify-start w-[400px] h-[500px] md:w-[550px] md:h-[650px] ">
-       <img src={`https://entertainment-laravel-production.up.railway.app//storage/${ShowSerie.image}`} className="w-full " />
+       <img src={`https://entertainment-laravel-production.up.railway.app/storage/${ShowSerie.image}`} className="w-full " />
        
       </div>
 

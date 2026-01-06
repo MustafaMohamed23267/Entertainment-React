@@ -12,7 +12,7 @@ export const SerieEdit = ()=>{
     
     useEffect(()=>{
         const fetchSeries = async ()=>{
-        const res = await fetch(`https://entertainment-laravel-production.up.railway.app//api/series/${id}`,{
+        const res = await fetch(`https://entertainment-laravel-production.up.railway.app/api/series/${id}`,{
             method:"GET",
             headers:{
                 Accept:"application/json",
@@ -86,7 +86,7 @@ const [errors , setErrors] = useState({});
         }
         
 
-        const res = await fetch(`https://entertainment-laravel-production.up.railway.app//api/series/${id}`,{
+        const res = await fetch(`https://entertainment-laravel-production.up.railway.app/api/series/${id}`,{
             method:"POST",
             body: DataForm,
             headers:{

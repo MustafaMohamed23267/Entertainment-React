@@ -9,7 +9,7 @@ export const AppProvider = ({children})=>
         const [user , setUser] = useState(null);
         const getUser = async ()=>
             {
-                const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/user",
+                const res = await fetch("https://entertainment-laravel-production.up.railway.app/api/user",
                     {
                         headers:{
                            "Content-Type": "application/json",

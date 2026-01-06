@@ -60,7 +60,7 @@ export const ProfileEdit = ()=>{
         data.append("profile_image",form.profile_image);
         
     
-        const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/profileupdate",{
+        const res = await fetch("https://entertainment-laravel-production.up.railway.app/api/profileupdate",{
           method:"POST",
           body:data,
           headers:{
@@ -119,7 +119,7 @@ export const ProfileEdit = ()=>{
                             {form.profile_image ? form.profile_image && (<img src={URL.createObjectURL(form.profile_image) } className=" w-35 rounded-full h-35 "/>) : "none"}
     
                     <Upload className={` ${form.profile_image ? "hidden" : ""}` } />
-                    <img src={`https://entertainment-laravel-production.up.railway.app//storage/${user.profile_image}`} className="rounded-full" />
+                    <img src={`https://entertainment-laravel-production.up.railway.app/storage/${user.profile_image}`} className="rounded-full" />
                   </div>
                     
                   </div>

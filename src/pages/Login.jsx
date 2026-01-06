@@ -19,7 +19,7 @@ const [passwordMessage , setPasswordMessage] = useState("");
 
 useEffect(()=>{
   const fetchlogin = async()=>{
-    const fetchres = await fetch("https://entertainment-laravel-production.up.railway.app//api/login",{
+    const fetchres = await fetch("https://entertainment-laravel-production.up.railway.app/api/login",{
       method:"GET",
       
       headers:{
@@ -40,7 +40,7 @@ const handleLogin = async (e)=>
       loginData.append("email",login.email);
       loginData.append("password",login.password);
 
-    const res = await fetch("https://entertainment-laravel-production.up.railway.app//api/login",{
+    const res = await fetch("https://entertainment-laravel-production.up.railway.app/api/login",{
       method:"POST",
       body:loginData,
       headers:{
